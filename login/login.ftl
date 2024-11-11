@@ -34,7 +34,64 @@
                     </#list>
                 </#if>
             </div>
+	    <div class="divider-text">or</div>
+            <div class="form-container">
+                <form
+		    id="kc-form-login"
+		    class="login-form"
+		    onsubmit="login.disabled = true; return true;"
+		    action=
+		    method="post">
+                    <fieldset class="login-form-group">
+                        <label class="login-form-label" for="username">Username</label>
+                        <input
+			    aria-invalid=""
+			    autocomplete="off"
+			    class="login-form-input"
+			    id="username"
+			    name="username"
+			    placeholder="Enter your username here..."
+			    required
+			    type="text"
+			    value="">
+                    </fieldset>
+                    <fieldset class="login-form-group">
+                        <label class="login-form-label" for="password">Password</label>
+                        <input
+			    aria-invalid=""
+			    autocomplete="off"
+			    class="login-form-input"
+			    id="password"
+			    name="password"
+			    placeholder="****"
+			    required
+			    type="password"
+			    value="">
+                    </fieldset>
+
+                    <input type="hidden" id="id-hidden-input" name="credentialId" />
+
+	            <input
+			class="login-form-submit"
+			name="login"
+			type="submit"
+			value="Sign In" />
+                </form>
+            </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function getCookie(name) {
+	  const value = `; ${document.cookie}`;
+	  const parts = value.split(`; ${name}=`);
+	  if (parts.length === 2) return parts.pop().split(';').shift();
+	}
+
+	const session_code = getCookie("AUTH_SESSION_ID")
+
+	const actionValue = `https://staging.openbluebrain.com/auth/realms/SBO/login-actions/authenticate?session_code=-${session_code}&amp;execution=9f5ce9ba-f364-4f9a-9063-09351330dff0&amp;client_id=sbo-core-webapp&amp;tab_id=3qLXSgP8wJY`
+
+        document.getElementById('kc-form-login').setAttribute(action, actionValue);
+    </script>
 </body>
 </html>

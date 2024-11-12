@@ -37,11 +37,11 @@
 	    <div class="divider-text">or</div>
             <div class="form-container">
                 <form
-		    id="kc-form-login"
+		    action="${url.loginAction}"
 		    class="login-form"
-		    onsubmit="login.disabled = true; return true;"
-		    action=
-		    method="post">
+		    id="kc-form-login"
+		    method="post"
+		    onsubmit="login.disabled = true; return true;">
                     <fieldset class="login-form-group">
                         <label class="login-form-label" for="username">Username</label>
                         <input
@@ -80,18 +80,5 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        function getCookie(name) {
-	  const value = `; ${document.cookie}`;
-	  const parts = value.split(`; ${name}=`);
-	  if (parts.length === 2) return parts.pop().split(';').shift();
-	}
-
-	const session_code = getCookie("AUTH_SESSION_ID")
-
-	const actionValue = `https://staging.openbluebrain.com/auth/realms/SBO/login-actions/authenticate?session_code=-${session_code}&amp;execution=9f5ce9ba-f364-4f9a-9063-09351330dff0&amp;client_id=sbo-core-webapp&amp;tab_id=3qLXSgP8wJY`
-
-        document.getElementById('kc-form-login').setAttribute(action, actionValue);
-    </script>
 </body>
 </html>

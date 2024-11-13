@@ -69,6 +69,7 @@ body {
   gap: 8px;
   margin: 0;
   padding: 0;
+  position: relative;
   text-align: left;
 }
 
@@ -76,6 +77,16 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: white;
+}
+
+.login-form-label[for="username"]::after {
+  background: white;
+  bottom: 0px;
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
 
 .login-form-input {

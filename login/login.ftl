@@ -43,14 +43,14 @@
 		    method="post"
 		    onsubmit="login.disabled = true; return true;">
                     <fieldset class="login-form-group">
-                        <label class="login-form-label" for="username">Username</label>
+                        <label class="login-form-label" for="username">User id</label>
                         <input
 			    aria-invalid=""
 			    autocomplete="off"
 			    class="login-form-input"
 			    id="username"
 			    name="username"
-			    placeholder="Enter your username here..."
+			    placeholder="Enter your user id here..."
 			    required
 			    type="text"
 			    value="">

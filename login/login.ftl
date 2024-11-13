@@ -68,9 +68,7 @@
 			    type="password"
 			    value="">
                     </fieldset>
-
                     <input type="hidden" id="id-hidden-input" name="credentialId" />
-
 	            <input
 			class="login-form-submit"
 			name="login"

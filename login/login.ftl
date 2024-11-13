@@ -63,7 +63,7 @@
 			    class="login-form-input"
 			    id="password"
 			    name="password"
-			    placeholder="****"
+			    placeholder="⁎⁎⁎⁎"
 			    required
 			    type="password"
 			    value="">

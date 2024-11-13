@@ -77,6 +77,9 @@
 			type="submit"
 			value="Sign In" />
                 </form>
+		<#if displayMessage && message?has_content>
+		<div class="login-validation-container validation-${message.type}"><span>${message.summary}</span></div>
+		</#if>
             </div>
         </div>
     </div>

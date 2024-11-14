@@ -1,4 +1,3 @@
-<#macro registrationLayout displayMessage=!messagesPerField.existsError('username','password')>
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -75,7 +74,7 @@
 			type="submit"
 			value="Sign In" />
                 </form>
-		<#if displayMessage && message?has_content>
+		<#if message?has_content>
 		<div class="login-validation-container validation-${message.type}"><span>${message.summary}</span></div>
 		</#if>
             </div>
@@ -83,4 +82,3 @@
     </div>
 </body>
 </html>
-</#macro>

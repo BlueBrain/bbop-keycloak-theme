@@ -1,3 +1,7 @@
+> [!WARNING]
+> The Blue Brain Project concluded in December 2024, so development has ceased under the BlueBrain GitHub organization.
+> Future development will take place at: https://github.com/openbraininstitute/bbop-keycloak-theme
+
 # BBOP Keycloak Theme
 
 A custom theme for the login page of the BBOP Keycloak instance, designed to facilitate login using identity providers.
